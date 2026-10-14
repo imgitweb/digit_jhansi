@@ -1,0 +1,201 @@
+/* Typography */
+.h1 {
+  @apply text-4xl font-extrabold tracking-tighter;
+}
+
+.h2 {
+  @apply text-3xl font-extrabold tracking-tighter;
+}
+
+.h3 {
+  @apply text-3xl font-extrabold;
+}
+
+.h4 {
+  @apply text-2xl font-extrabold tracking-tight;
+}
+
+@media (width >= theme(--breakpoint-md)) {
+  .h1 {
+    @apply text-5xl;
+  }
+
+  .h2 {
+    @apply text-4xl;
+  }
+}
+
+/* Buttons */
+.btn,
+.btn-lg,
+.btn-sm,
+.btn-xs {
+  @apply text-sm inline-flex items-center justify-center border border-transparent leading-5 transition-all duration-200;
+  background-color: #03D985;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn:hover,
+.btn-lg:hover,
+.btn-sm:hover,
+.btn-xs:hover {
+  background-color: #02b870;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(3, 217, 133, 0.25);
+}
+
+.btn {
+  @apply px-3 py-2;
+}
+
+.btn-lg {
+  @apply px-4 py-3;
+}
+
+.btn-sm {
+  @apply px-2 py-1;
+}
+
+.btn-xs {
+  @apply px-2 py-0.5;
+}
+
+/* Forms */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+  @apply bg-white border focus:ring-0 focus:ring-offset-0 disabled:bg-gray-100 disabled:border-gray-200 disabled:hover:border-gray-200;
+}
+
+.form-checkbox {
+  @apply rounded-sm;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select {
+  @apply text-sm leading-5 py-2 px-3 shadow-sm;
+  color: #333333;
+  border-color: #dddddd;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-multiselect:focus,
+.form-select:focus,
+.form-input:hover,
+.form-textarea:hover,
+.form-multiselect:hover,
+.form-select:hover {
+  border-color: #03D985;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.form-select {
+  @apply pr-10;
+}
+
+.form-checkbox,
+.form-radio {
+  color: #03D985;
+  border-color: #dddddd;
+}
+
+.form-checkbox:checked,
+.form-radio:checked {
+  background-color: #03D985;
+  border-color: #03D985;
+}
+
+.form-checkbox:focus-visible,
+.form-radio:focus-visible {
+  @apply ring-2;
+  --tw-ring-color: rgba(3, 217, 133, 0.5);
+}
+
+/* Switch element */
+.form-switch {
+  @apply relative select-none;
+  width: 44px;
+}
+
+.form-switch label {
+  @apply block overflow-hidden cursor-pointer h-6;
+  border-radius: 8px;
+}
+
+.form-switch label > span:first-child {
+  @apply absolute block rounded-full;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  right: 50%;
+  transition: all .2s ease-out;
+}
+
+.form-switch input[type="checkbox"] + label {
+  @apply bg-gray-400;
+}
+
+.form-switch input[type="checkbox"]:checked + label {
+  background-color: #03D985;
+}
+
+.form-switch input[type="checkbox"]:checked + label > span:first-child {
+  left: 22px;
+}
+
+.form-switch input[type="checkbox"]:disabled + label {
+  @apply cursor-not-allowed bg-gray-100 border border-gray-200;
+}
+
+.form-switch input[type="checkbox"]:disabled + label > span:first-child {
+  @apply bg-gray-400;
+}
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+   /* TASK 6: SCROLLBAR CSS */
+   /* Add the following lines to your utility-patterns.css or style.css: */
+
+  aside nav::-webkit-scrollbar {
+    width: 3px;
+  }
+  aside nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  aside nav::-webkit-scrollbar-thumb {
+    background: rgba(3, 217, 133, 0.15);
+    border-radius: 10px;
+  }
+  aside nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(3, 217, 133, 0.35);
+  }

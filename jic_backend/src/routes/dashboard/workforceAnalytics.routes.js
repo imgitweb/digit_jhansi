@@ -1,0 +1,1 @@
+module.exports = require('./factory.routes')(require('../../controllers/dashboard/workforceAnalytics.controller'));  

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Favicons: paste inside <head> in index.html (files live in /public root) -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0F1F3D" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JIC PRD - JIC Panchayaty rural development -->
+    <title>JIC - Digit Jhansi PRD (Admin)</title>
+    <script>
+      if (localStorage.theme === "dark" || !("theme" in localStorage)) {
+        document.querySelector("html").classList.add("dark");
+        document.querySelector("html").style.colorScheme = "dark";
+      } else {
+        document.querySelector("html").classList.remove("dark");
+        document.querySelector("html").style.colorScheme = "light";
+      }
+    </script>
+  </head>
+  <body
+    class="font-inter antialiased bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400"
+  >
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      if (localStorage.getItem("sidebar-expanded") == "true") {
+        document.querySelector("body").classList.add("sidebar-expanded");
+      } else {
+        document.querySelector("body").classList.remove("sidebar-expanded");
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

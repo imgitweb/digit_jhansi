@@ -1,0 +1,1 @@
+module.exports = require('./factory.controller').createDashboardController(require('../../models/dashboard/industryHealth.model')); 
